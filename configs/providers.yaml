@@ -1,0 +1,21 @@
+providers:
+  vast:
+    # Search is separate because Vast rents a specific offer ID.
+    gpu_name: H100 SXM
+    gpu_count: 1
+    image: nvidia/cuda:12.8.1-devel-ubuntu24.04
+    disk_gb: 200
+    reliability: 0.99
+  digitalocean:
+    name: enginebench-h100
+    region: atl1
+    # Resolve current H100 slugs with: doctl compute size list
+    size: REPLACE_WITH_CURRENT_H100_SIZE_SLUG
+    image: REPLACE_WITH_CURRENT_NVIDIA_AI_ML_IMAGE_SLUG
+    ssh_key_ids: []
+    tags: [enginebench, ephemeral]
+  hyperbolic:
+    instance_type: virtual-machine
+    gpu_count: 1
+    gpu_name: H100
+    network_type: null

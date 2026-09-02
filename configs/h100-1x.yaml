@@ -1,0 +1,23 @@
+name: h100-1x
+model: {id: "${MODEL_ID:-Qwen/Qwen2.5-7B-Instruct}", artifact_kind: base, dtype: bfloat16}
+hardware: {gpu_type: NVIDIA H100 80GB HBM3, gpu_count: 1, min_free_memory_mib: 76000}
+target: {kind: native, namespace: enginebench}
+benchmark:
+  {dataset: random, input_tokens: 1024, output_tokens: 256, prompts: 256,
+   concurrency: [1, 8, 32, 64], request_rate: inf, warmup_prompts: 16,
+   percentiles: [50, 90, 95, 99]}
+engines:
+  transformers:
+    {image: "${TRANSFORMERS_IMAGE:-kserve/huggingfaceserver:latest-gpu}",
+     client_image: "${VLLM_IMAGE:-vllm/vllm-openai:latest}", port: 8000,
+     endpoint_prefix: /openai, server_args: []}
+  vllm:
+    {image: "${VLLM_IMAGE:-vllm/vllm-openai:latest}", port: 8000,
+     server_args: [--tensor-parallel-size, "1", --disable-log-requests]}
+  sglang:
+    {image: "${SGLANG_IMAGE:-lmsysorg/sglang:latest}", port: 8000,
+     server_args: [--tp, "1"]}
+  tensorrt_llm:
+    {image: "${TRTLLM_IMAGE:-nvcr.io/nvidia/tensorrt-llm/release:latest}", port: 8000,
+     server_args: [--tp_size, "1"]}
+provider: {name: local, options: {}}

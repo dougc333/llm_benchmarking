@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "h100-engine-lab"
+version = "0.1.0"
+description = "Reproducible orchestration for native LLM-engine benchmarks on H100 and Kubernetes"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+dependencies = [
+  "pydantic>=2.9",
+  "pyyaml>=6.0",
+  "typer>=0.15",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.9"]
+
+[project.scripts]
+enginebench = "enginebench.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/enginebench"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]

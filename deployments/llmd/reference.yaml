@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: enginebench-llmd-reference
+  namespace: default
+data:
+  README: |
+    llm-d is installed from its official optimized-baseline guide rather than
+    copied into this repository. See deployments/llmd/README.md. This ConfigMap
+    records that choice in the cluster and does not provision GPUs by itself.

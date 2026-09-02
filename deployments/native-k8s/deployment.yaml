@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: vllm}
+  strategy: {type: Recreate}
+  template:
+    metadata:
+      labels: {app: vllm, app.kubernetes.io/managed-by: enginebench}
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: /metrics
+    spec:
+      terminationGracePeriodSeconds: 120
+      containers:
+        - name: engine
+          image: vllm/vllm-openai:latest
+          args:
+            - --model
+            - Qwen/Qwen2.5-7B-Instruct
+            - --dtype
+            - bfloat16
+            - --tensor-parallel-size
+            - "1"
+            - --disable-log-requests
+          ports: [{name: http, containerPort: 8000}]
+          env:
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef: {name: hf-token, key: token, optional: true}
+          resources:
+            requests: {cpu: "8", memory: 32Gi, nvidia.com/gpu: "1"}
+            limits: {cpu: "16", memory: 64Gi, nvidia.com/gpu: "1"}
+          readinessProbe:
+            httpGet: {path: /health, port: http}
+            initialDelaySeconds: 30
+            periodSeconds: 5
+            failureThreshold: 120
+          volumeMounts:
+            - {name: shm, mountPath: /dev/shm}
+            - {name: hf-cache, mountPath: /root/.cache/huggingface}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+      volumes:
+        - name: shm
+          emptyDir: {medium: Memory, sizeLimit: 16Gi}
+        - name: hf-cache
+          emptyDir: {}

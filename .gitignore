@@ -1,0 +1,45 @@
+# Credentials: ignore .env files at every directory depth.
+.env
+**/.env
+.env.*
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+
+# JavaScript
+node_modules/
+dashboard/dist/
+*.tsbuildinfo
+
+# Benchmark/runtime artifacts
+results/**/*.jsonl
+results/**/*.csv
+results/**/*.parquet
+results/**/*.log
+results/**/*.nsys-rep
+results/**/*.sqlite
+results/raw/**/*.json
+results/training/**/*.json
+results/profiles/**/*.json
+!results/README.md
+!results/.gitkeep
+!results/normalized/**/*.json
+!results/normalized/.gitkeep
+dashboard/public/results.json
+
+# Local state and secrets
+.enginebench/
+kubeconfig*
+*.pem
+*.key
+.DS_Store

@@ -1,0 +1,17 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  name: qwen-vllm
+spec:
+  predictor:
+    model:
+      modelFormat: {name: huggingface}
+      storageUri: hf://Qwen/Qwen2.5-7B-Instruct
+      args:
+        - --model_name=qwen
+        - --backend=vllm
+        - --dtype=bfloat16
+        - --gpu_memory_utilization=0.9
+      resources:
+        requests: {cpu: "8", memory: 32Gi, nvidia.com/gpu: "1"}
+        limits: {cpu: "16", memory: 64Gi, nvidia.com/gpu: "1"}
