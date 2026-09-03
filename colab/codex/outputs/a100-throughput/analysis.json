@@ -1,0 +1,10 @@
+{
+  "observations": 21,
+  "cutoff_rule": "First measured batch >=95% of observed peak",
+  "cutoff_batch": 128,
+  "cutoff_output_tokens_per_second": 2432.1847086942366,
+  "observed_peak_batch": 196,
+  "observed_peak_output_tokens_per_second": 2492.8162679652746,
+  "cutoff_percent_of_observed_peak": 97.567748572159,
+  "additional_throughput_percent": 2.4928846503434077
+}
