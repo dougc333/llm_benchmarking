@@ -1,0 +1,4 @@
+[2026-09-04T02:15:33.484258+00:00] 1 server configurations; 2 benchmark points. Output: /content/a100_stage4_input4096_output256
+[2026-09-04T02:15:33.485086+00:00] Starting s0256_t08192, attempt 1; child progress follows.
+[2026-09-04T02:24:37.986202+00:00] RuntimeError: s0256_t08192 stopped (failed, exit 1); results preserved. Use --resume to retry.
+[2026-09-04T02:24:37.987539+00:00] Finished: failed; creating combined ZIP.

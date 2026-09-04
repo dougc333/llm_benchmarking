@@ -1,0 +1,23 @@
+[2026-09-04T02:15:33.561704+00:00] Output: /content/a100_stage4_input4096_output256/configs/s0256_t08192/attempt_001
+[2026-09-04T02:15:33.755682+00:00] Starting server PID 103609; progress is in server.log
+[2026-09-04T02:16:03.798591+00:00] Still loading/compiling; see server.log
+[2026-09-04T02:16:28.872345+00:00] Server ready in 55.1s. Keeping server settings fixed.
+[2026-09-04T02:16:28.872790+00:00] c0128_r01: concurrency=128, prompts=1024, warmups=128
+[2026-09-04T02:16:58.881662+00:00] c0128_r01: still running (30s); see client.log
+[2026-09-04T02:17:28.889608+00:00] c0128_r01: still running (60s); see client.log
+[2026-09-04T02:17:58.896857+00:00] c0128_r01: still running (90s); see client.log
+[2026-09-04T02:18:28.903837+00:00] c0128_r01: still running (120s); see client.log
+[2026-09-04T02:18:58.910905+00:00] c0128_r01: still running (150s); see client.log
+[2026-09-04T02:19:28.917662+00:00] c0128_r01: still running (180s); see client.log
+[2026-09-04T02:19:58.924654+00:00] c0128_r01: still running (210s); see client.log
+[2026-09-04T02:20:28.931448+00:00] c0128_r01: still running (240s); see client.log
+[2026-09-04T02:20:58.938170+00:00] c0128_r01: still running (270s); see client.log
+[2026-09-04T02:21:28.945336+00:00] c0128_r01: still running (300s); see client.log
+[2026-09-04T02:21:58.952156+00:00] c0128_r01: still running (330s); see client.log
+[2026-09-04T02:22:28.959212+00:00] c0128_r01: still running (360s); see client.log
+[2026-09-04T02:22:58.965949+00:00] c0128_r01: still running (390s); see client.log
+[2026-09-04T02:23:28.972847+00:00] c0128_r01: still running (420s); see client.log
+[2026-09-04T02:23:58.979780+00:00] c0128_r01: still running (450s); see client.log
+[2026-09-04T02:24:28.986575+00:00] c0128_r01: still running (480s); see client.log
+[2026-09-04T02:24:36.602042+00:00] RuntimeError: Not all benchmark requests succeeded; stopping sweep. Inspect result.json errors.
+[2026-09-04T02:24:37.269076+00:00] Finished: failed. Packaging results.
