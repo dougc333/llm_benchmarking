@@ -1,0 +1,22 @@
+[2026-09-04T01:28:45.414295+00:00] Output: /content/a100_stage3_tokens16384/configs/s0256_t16384/attempt_001
+[2026-09-04T01:28:45.609207+00:00] Starting server PID 91246; progress is in server.log
+[2026-09-04T01:29:15.653484+00:00] Still loading/compiling; see server.log
+[2026-09-04T01:29:45.689369+00:00] Still loading/compiling; see server.log
+[2026-09-04T01:30:05.754378+00:00] Server ready in 80.1s. Keeping server settings fixed.
+[2026-09-04T01:30:05.755258+00:00] c0128_r01: concurrency=128, prompts=1024, warmups=128
+[2026-09-04T01:30:35.764765+00:00] c0128_r01: still running (30s); see client.log
+[2026-09-04T01:31:05.771555+00:00] c0128_r01: still running (60s); see client.log
+[2026-09-04T01:31:35.778591+00:00] c0128_r01: still running (90s); see client.log
+[2026-09-04T01:32:05.785748+00:00] c0128_r01: still running (120s); see client.log
+[2026-09-04T01:32:27.404372+00:00] c0128_r01: output=2510.948105914681 tok/s, p95 TTFT=5090.671437300534 ms, p95 TPOT=46.9185892376474 ms
+[2026-09-04T01:32:27.405954+00:00] c0256_r01: concurrency=256, prompts=2048, warmups=256
+[2026-09-04T01:32:57.416447+00:00] c0256_r01: still running (30s); see client.log
+[2026-09-04T01:33:27.423659+00:00] c0256_r01: still running (60s); see client.log
+[2026-09-04T01:33:57.430654+00:00] c0256_r01: still running (90s); see client.log
+[2026-09-04T01:34:27.437708+00:00] c0256_r01: still running (120s); see client.log
+[2026-09-04T01:34:57.444731+00:00] c0256_r01: still running (150s); see client.log
+[2026-09-04T01:35:27.451684+00:00] c0256_r01: still running (180s); see client.log
+[2026-09-04T01:35:57.459244+00:00] c0256_r01: still running (210s); see client.log
+[2026-09-04T01:36:27.466778+00:00] c0256_r01: still running (240s); see client.log
+[2026-09-04T01:36:36.694052+00:00] c0256_r01: output=2733.486794770718 tok/s, p95 TTFT=9852.565768250133 ms, p95 TPOT=88.74885997804013 ms
+[2026-09-04T01:36:37.412907+00:00] Finished: completed. Packaging results.
