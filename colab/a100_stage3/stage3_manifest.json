@@ -1,0 +1,98 @@
+{
+  "started_utc": "2026-09-04T00:31:22.950192+00:00",
+  "settings": {
+    "sequence_caps": [
+      128,
+      256
+    ],
+    "token_budgets": [
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "concurrency": [
+      64,
+      128,
+      256
+    ],
+    "vllm_bin": "/content/vllm-cu129/bin/vllm",
+    "model": "Qwen/Qwen2.5-7B-Instruct",
+    "input_tokens": 1024,
+    "output_tokens": 256,
+    "max_model_len": 32768,
+    "gpu_memory_utilization": 0.9,
+    "optimization_level": "2",
+    "num_prompts": 0,
+    "min_prompts": 128,
+    "waves": 8,
+    "warmups": 0,
+    "repeats": 1,
+    "seed": 1234,
+    "port": 8000,
+    "startup_timeout": 1200,
+    "point_timeout": 3600,
+    "sample_interval": 5,
+    "helper_sha256": "4f5fde6b1fa446a8fd7ddcc65ae945f6129d9ec58893364e2fd1693961d4bce7",
+    "runner_sha256": "6a8fef46024c127b2641291a657d9a40b40d60f35bcf86c79951cc62445cd597"
+  },
+  "dry_run": false,
+  "configurations": [
+    {
+      "config_id": "s0256_t08192",
+      "max_num_seqs": 256,
+      "max_num_batched_tokens": 8192
+    },
+    {
+      "config_id": "s0256_t02048",
+      "max_num_seqs": 256,
+      "max_num_batched_tokens": 2048
+    },
+    {
+      "config_id": "s0256_t04096",
+      "max_num_seqs": 256,
+      "max_num_batched_tokens": 4096
+    },
+    {
+      "config_id": "s0256_t16384",
+      "max_num_seqs": 256,
+      "max_num_batched_tokens": 16384
+    },
+    {
+      "config_id": "s0256_t32768",
+      "max_num_seqs": 256,
+      "max_num_batched_tokens": 32768
+    },
+    {
+      "config_id": "s0128_t08192",
+      "max_num_seqs": 128,
+      "max_num_batched_tokens": 8192
+    },
+    {
+      "config_id": "s0128_t02048",
+      "max_num_seqs": 128,
+      "max_num_batched_tokens": 2048
+    },
+    {
+      "config_id": "s0128_t04096",
+      "max_num_seqs": 128,
+      "max_num_batched_tokens": 4096
+    },
+    {
+      "config_id": "s0128_t16384",
+      "max_num_seqs": 128,
+      "max_num_batched_tokens": 16384
+    },
+    {
+      "config_id": "s0128_t32768",
+      "max_num_seqs": 128,
+      "max_num_batched_tokens": 32768
+    }
+  ],
+  "status": "failed",
+  "sequence_cap_selection": "128 and 256 are candidates from prior offline/client results, not confirmed Stage 2 winners.",
+  "point_count": 30,
+  "error": "RuntimeError: s0256_t02048 stopped (failed, exit 1); results preserved. Use --resume to retry.",
+  "ended_utc": "2026-09-04T00:40:38.842268+00:00"
+}

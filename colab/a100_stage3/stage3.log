@@ -1,0 +1,6 @@
+[2026-09-04T00:31:22.950489+00:00] 10 server configurations; 30 benchmark points. Output: /content/a100_stage3
+[2026-09-04T00:31:22.951330+00:00] Starting s0256_t08192, attempt 1; child progress follows.
+[2026-09-04T00:40:38.748068+00:00] Completed s0256_t08192; 3 point records collected.
+[2026-09-04T00:40:38.748485+00:00] Starting s0256_t02048, attempt 1; child progress follows.
+[2026-09-04T00:40:38.840617+00:00] RuntimeError: s0256_t02048 stopped (failed, exit 1); results preserved. Use --resume to retry.
+[2026-09-04T00:40:38.842555+00:00] Finished: failed; creating combined ZIP.

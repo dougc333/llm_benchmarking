@@ -1,0 +1,64 @@
+[
+  {
+    "config_id": "s0256_t08192",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 8192,
+    "status": "completed",
+    "attempt": "attempt_001"
+  },
+  {
+    "config_id": "s0256_t02048",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 2048,
+    "status": "failed",
+    "attempt": "attempt_001"
+  },
+  {
+    "config_id": "s0256_t04096",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 4096,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0256_t16384",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 16384,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0256_t32768",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 32768,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0128_t08192",
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 8192,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0128_t02048",
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 2048,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0128_t04096",
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 4096,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0128_t16384",
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 16384,
+    "status": "not_started"
+  },
+  {
+    "config_id": "s0128_t32768",
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 32768,
+    "status": "not_started"
+  }
+]
