@@ -1,0 +1,24 @@
+[2026-09-04T01:16:14.576728+00:00] Output: /content/a100_stage3_tokens4096/configs/s0256_t04096/attempt_001
+[2026-09-04T01:16:14.773396+00:00] Starting server PID 87566; progress is in server.log
+[2026-09-04T01:16:44.818351+00:00] Still loading/compiling; see server.log
+[2026-09-04T01:17:14.856569+00:00] Still loading/compiling; see server.log
+[2026-09-04T01:17:34.922702+00:00] Server ready in 80.1s. Keeping server settings fixed.
+[2026-09-04T01:17:34.923549+00:00] c0128_r01: concurrency=128, prompts=1024, warmups=128
+[2026-09-04T01:18:04.931860+00:00] c0128_r01: still running (30s); see client.log
+[2026-09-04T01:18:34.938687+00:00] c0128_r01: still running (60s); see client.log
+[2026-09-04T01:19:04.945298+00:00] c0128_r01: still running (90s); see client.log
+[2026-09-04T01:19:34.952342+00:00] c0128_r01: still running (120s); see client.log
+[2026-09-04T01:20:04.959336+00:00] c0128_r01: still running (150s); see client.log
+[2026-09-04T01:20:05.572949+00:00] c0128_r01: output=2342.3690065291935 tok/s, p95 TTFT=5114.520351799456 ms, p95 TPOT=52.46873875255165 ms
+[2026-09-04T01:20:05.574843+00:00] c0256_r01: concurrency=256, prompts=2048, warmups=256
+[2026-09-04T01:20:35.583491+00:00] c0256_r01: still running (30s); see client.log
+[2026-09-04T01:21:05.590540+00:00] c0256_r01: still running (60s); see client.log
+[2026-09-04T01:21:35.597798+00:00] c0256_r01: still running (90s); see client.log
+[2026-09-04T01:22:05.604758+00:00] c0256_r01: still running (120s); see client.log
+[2026-09-04T01:22:35.611751+00:00] c0256_r01: still running (150s); see client.log
+[2026-09-04T01:23:05.618794+00:00] c0256_r01: still running (180s); see client.log
+[2026-09-04T01:23:35.625927+00:00] c0256_r01: still running (210s); see client.log
+[2026-09-04T01:24:05.633015+00:00] c0256_r01: still running (240s); see client.log
+[2026-09-04T01:24:35.640216+00:00] c0256_r01: still running (270s); see client.log
+[2026-09-04T01:24:48.365111+00:00] c0256_r01: output=2361.574247791353 tok/s, p95 TTFT=10569.531368801016 ms, p95 TPOT=105.25185614529191 ms
+[2026-09-04T01:24:49.083522+00:00] Finished: completed. Packaging results.

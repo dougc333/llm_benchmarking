@@ -1,0 +1,18 @@
+{
+  "interpretation": "95% of observed peak is a screening marker, not a latency-qualified serving limit or proven saturation knee.",
+  "latency_slo_applied": false,
+  "points": [
+    {
+      "client_concurrency": 128,
+      "mean_output_tokens_per_second": 2342.3690065291935,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 256,
+      "mean_output_tokens_per_second": 2361.574247791353,
+      "repeats": 1
+    }
+  ],
+  "observed_peak_output_tokens_per_second": 2361.574247791353,
+  "first_concurrency_at_95pct": 128
+}

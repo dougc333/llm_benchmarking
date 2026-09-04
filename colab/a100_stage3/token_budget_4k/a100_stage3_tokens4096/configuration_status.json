@@ -1,0 +1,9 @@
+[
+  {
+    "config_id": "s0256_t04096",
+    "max_num_seqs": 256,
+    "max_num_batched_tokens": 4096,
+    "status": "completed",
+    "attempt": "attempt_001"
+  }
+]

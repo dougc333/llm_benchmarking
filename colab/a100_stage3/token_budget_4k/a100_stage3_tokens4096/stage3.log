@@ -1,0 +1,4 @@
+[2026-09-04T01:16:14.502370+00:00] 1 server configurations; 2 benchmark points. Output: /content/a100_stage3_tokens4096
+[2026-09-04T01:16:14.503205+00:00] Starting s0256_t04096, attempt 1; child progress follows.
+[2026-09-04T01:24:50.981421+00:00] Completed s0256_t04096; 2 point records collected.
+[2026-09-04T01:24:50.982806+00:00] Finished: completed; creating combined ZIP.
