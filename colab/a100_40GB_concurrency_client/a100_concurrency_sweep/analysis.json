@@ -1,0 +1,48 @@
+{
+  "interpretation": "95% of observed peak is a screening marker, not a latency-qualified serving limit or proven saturation knee.",
+  "latency_slo_applied": false,
+  "points": [
+    {
+      "client_concurrency": 1,
+      "mean_output_tokens_per_second": 79.2000130870887,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 8,
+      "mean_output_tokens_per_second": 554.4856676739745,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 16,
+      "mean_output_tokens_per_second": 949.1213962872357,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 32,
+      "mean_output_tokens_per_second": 1459.5854217309932,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 64,
+      "mean_output_tokens_per_second": 1976.5614116267316,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 128,
+      "mean_output_tokens_per_second": 2462.7850174869,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 256,
+      "mean_output_tokens_per_second": 2610.5938485974852,
+      "repeats": 1
+    },
+    {
+      "client_concurrency": 512,
+      "mean_output_tokens_per_second": 2568.4357849709613,
+      "repeats": 1
+    }
+  ],
+  "observed_peak_output_tokens_per_second": 2610.5938485974852,
+  "first_concurrency_at_95pct": 256
+}
