@@ -1,3 +1,12 @@
+The goal of this repo is to show the process of using virtually free colab GPUs to closer to production level webapp dashboard. The big production issues are perf as a fn of scalability and failures.  Wd can't cover those critical perf issues in a meetup.  
+
+The benchmarks are meant to demonstrate basic vllm concepts. Not useful to go start deploying on H100s until there are specific use cases. 
+
+
+
+This plan was created by codex. Is it accurate? Up to a blunt point, no. A LLM isn't wise and never says no. You have to make a decision of what to believe. These aren't hallucinations. 
+
+
 ![Plan](vllm_plan.png)
 
 ## A100 40GB benchmark findings — September 3, 2026
@@ -31,3 +40,9 @@ There isn't much variation in the 3 parameters, client_concurrency(client load),
 ## Preemptions versus load and scheduling parameters
 
 ![Preemptions versus client concurrency, workload length, and token budget](preemption.png)
+
+The preemption graph shows the necessity of adding a request gateway in front of the server to allow the server to recover.
+
+Add a simulated gateway in front of the server and test middleware admission control. 
+
+

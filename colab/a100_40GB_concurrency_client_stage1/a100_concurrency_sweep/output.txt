@@ -1,0 +1,103 @@
+[2026-09-05T13:47:39.786852+00:00] Output: /workspace/concurrency_sweep_run_20260905T134731Z
+[2026-09-05T13:47:39.976574+00:00] Starting server PID 10036; progress is in server.log
+[2026-09-05T13:48:10.006160+00:00] Still loading/compiling; see server.log
+[2026-09-05T13:48:12.041627+00:00] Server ready in 32.1s. Keeping server settings fixed.
+[2026-09-05T13:48:12.048188+00:00] c0001_r01: concurrency=1, prompts=128, warmups=8
+[2026-09-05T13:48:42.063008+00:00] c0001_r01: still running (30s); see client.log
+[2026-09-05T13:49:12.073910+00:00] c0001_r01: still running (60s); see client.log
+[2026-09-05T13:49:42.083713+00:00] c0001_r01: still running (90s); see client.log
+[2026-09-05T13:50:12.094426+00:00] c0001_r01: still running (120s); see client.log
+[2026-09-05T13:50:42.104586+00:00] c0001_r01: still running (150s); see client.log
+[2026-09-05T13:51:12.117499+00:00] c0001_r01: still running (180s); see client.log
+[2026-09-05T13:51:42.130064+00:00] c0001_r01: still running (210s); see client.log
+[2026-09-05T13:52:12.140263+00:00] c0001_r01: still running (240s); see client.log
+[2026-09-05T13:52:42.152321+00:00] c0001_r01: still running (270s); see client.log
+[2026-09-05T13:53:12.162165+00:00] c0001_r01: still running (300s); see client.log
+[2026-09-05T13:53:42.171031+00:00] c0001_r01: still running (330s); see client.log
+[2026-09-05T13:54:12.184119+00:00] c0001_r01: still running (360s); see client.log
+[2026-09-05T13:54:42.195636+00:00] c0001_r01: still running (390s); see client.log
+[2026-09-05T13:55:12.205608+00:00] c0001_r01: still running (420s); see client.log
+[2026-09-05T13:55:42.217501+00:00] c0001_r01: still running (450s); see client.log
+[2026-09-05T13:56:12.228238+00:00] c0001_r01: still running (480s); see client.log
+[2026-09-05T13:56:42.238908+00:00] c0001_r01: still running (510s); see client.log
+[2026-09-05T13:57:12.249922+00:00] c0001_r01: still running (540s); see client.log
+[2026-09-05T13:57:42.261342+00:00] c0001_r01: still running (570s); see client.log
+[2026-09-05T13:58:00.806521+00:00] c0001_r01: output=56.96126015993997 tok/s, p95 TTFT=140.8552488312125 ms, p95 TPOT=17.419509384050674 ms
+[2026-09-05T13:58:00.828761+00:00] c0008_r01: concurrency=8, prompts=128, warmups=8
+[2026-09-05T13:58:30.862986+00:00] c0008_r01: still running (30s); see client.log
+[2026-09-05T13:59:00.872599+00:00] c0008_r01: still running (60s); see client.log
+[2026-09-05T13:59:30.883290+00:00] c0008_r01: still running (90s); see client.log
+[2026-09-05T13:59:45.419468+00:00] c0008_r01: output=358.47997364857883 tok/s, p95 TTFT=1050.4799532704055 ms, p95 TPOT=21.836133443330432 ms
+[2026-09-05T13:59:45.440131+00:00] c0016_r01: concurrency=16, prompts=128, warmups=16
+[2026-09-05T14:00:15.454470+00:00] c0016_r01: still running (30s); see client.log
+[2026-09-05T14:00:45.469424+00:00] c0016_r01: still running (60s); see client.log
+[2026-09-05T14:00:54.531558+00:00] c0016_r01: output=591.3852591200771 tok/s, p95 TTFT=2063.0326532758772 ms, p95 TPOT=26.43560089097888 ms
+[2026-09-05T14:00:54.551424+00:00] c0032_r01: concurrency=32, prompts=256, warmups=32
+[2026-09-05T14:01:24.564800+00:00] c0032_r01: still running (30s); see client.log
+[2026-09-05T14:01:54.577780+00:00] c0032_r01: still running (60s); see client.log
+[2026-09-05T14:02:24.631651+00:00] c0032_r01: output=858.6893169994039 tok/s, p95 TTFT=3200.9351002052426 ms, p95 TPOT=33.25644311513386 ms
+[2026-09-05T14:02:24.651511+00:00] c0064_r01: concurrency=64, prompts=512, warmups=64
+[2026-09-05T14:02:54.662707+00:00] c0064_r01: still running (30s); see client.log
+[2026-09-05T14:03:24.672198+00:00] c0064_r01: still running (60s); see client.log
+[2026-09-05T14:03:54.680698+00:00] c0064_r01: still running (90s); see client.log
+[2026-09-05T14:04:24.689327+00:00] c0064_r01: still running (120s); see client.log
+[2026-09-05T14:04:35.271610+00:00] c0064_r01: output=1125.4851562525316 tok/s, p95 TTFT=5200.032129883766 ms, p95 TPOT=52.78783952050349 ms
+[2026-09-05T14:04:35.292316+00:00] c0128_r01: concurrency=128, prompts=1024, warmups=128
+[2026-09-05T14:05:05.306517+00:00] c0128_r01: still running (30s); see client.log
+[2026-09-05T14:05:35.315603+00:00] c0128_r01: still running (60s); see client.log
+[2026-09-05T14:06:05.324786+00:00] c0128_r01: still running (90s); see client.log
+[2026-09-05T14:06:35.334392+00:00] c0128_r01: still running (120s); see client.log
+[2026-09-05T14:07:05.344468+00:00] c0128_r01: still running (150s); see client.log
+[2026-09-05T14:07:35.355174+00:00] c0128_r01: still running (180s); see client.log
+[2026-09-05T14:08:05.368128+00:00] c0128_r01: still running (210s); see client.log
+[2026-09-05T14:08:13.478816+00:00] c0128_r01: output=1300.2723839634295 tok/s, p95 TTFT=10361.507495306432 ms, p95 TPOT=93.8980951138279 ms
+[2026-09-05T14:08:13.505169+00:00] c0256_r01: concurrency=256, prompts=2048, warmups=256
+[2026-09-05T14:08:43.563817+00:00] c0256_r01: still running (30s); see client.log
+[2026-09-05T14:09:13.573928+00:00] c0256_r01: still running (60s); see client.log
+[2026-09-05T14:09:43.583670+00:00] c0256_r01: still running (90s); see client.log
+[2026-09-05T14:10:13.596851+00:00] c0256_r01: still running (120s); see client.log
+[2026-09-05T14:10:43.611146+00:00] c0256_r01: still running (150s); see client.log
+[2026-09-05T14:11:13.621089+00:00] c0256_r01: still running (180s); see client.log
+[2026-09-05T14:11:43.630860+00:00] c0256_r01: still running (210s); see client.log
+[2026-09-05T14:12:13.641444+00:00] c0256_r01: still running (240s); see client.log
+[2026-09-05T14:12:43.652087+00:00] c0256_r01: still running (270s); see client.log
+[2026-09-05T14:13:13.661836+00:00] c0256_r01: still running (300s); see client.log
+[2026-09-05T14:13:43.672383+00:00] c0256_r01: still running (330s); see client.log
+[2026-09-05T14:14:13.684049+00:00] c0256_r01: still running (360s); see client.log
+[2026-09-05T14:14:43.697612+00:00] c0256_r01: still running (390s); see client.log
+[2026-09-05T14:15:13.714476+00:00] c0256_r01: still running (420s); see client.log
+[2026-09-05T14:15:17.936076+00:00] c0256_r01: output=1295.9051125403996 tok/s, p95 TTFT=20828.322349768132 ms, p95 TPOT=191.5205078783865 ms
+[2026-09-05T14:15:17.956296+00:00] c0512_r01: concurrency=512, prompts=4096, warmups=256
+[2026-09-05T14:15:47.968854+00:00] c0512_r01: still running (30s); see client.log
+[2026-09-05T14:16:17.979315+00:00] c0512_r01: still running (60s); see client.log
+[2026-09-05T14:16:47.990589+00:00] c0512_r01: still running (90s); see client.log
+[2026-09-05T14:17:18.006747+00:00] c0512_r01: still running (120s); see client.log
+[2026-09-05T14:17:48.016266+00:00] c0512_r01: still running (150s); see client.log
+[2026-09-05T14:18:18.027569+00:00] c0512_r01: still running (180s); see client.log
+[2026-09-05T14:18:48.038133+00:00] c0512_r01: still running (210s); see client.log
+[2026-09-05T14:19:18.047108+00:00] c0512_r01: still running (240s); see client.log
+[2026-09-05T14:19:48.057971+00:00] c0512_r01: still running (270s); see client.log
+[2026-09-05T14:20:18.069522+00:00] c0512_r01: still running (300s); see client.log
+[2026-09-05T14:20:48.079720+00:00] c0512_r01: still running (330s); see client.log
+[2026-09-05T14:21:18.089824+00:00] c0512_r01: still running (360s); see client.log
+[2026-09-05T14:21:48.101672+00:00] c0512_r01: still running (390s); see client.log
+[2026-09-05T14:22:18.112190+00:00] c0512_r01: still running (420s); see client.log
+[2026-09-05T14:22:48.122428+00:00] c0512_r01: still running (450s); see client.log
+[2026-09-05T14:23:18.133648+00:00] c0512_r01: still running (480s); see client.log
+[2026-09-05T14:23:48.150698+00:00] c0512_r01: still running (510s); see client.log
+[2026-09-05T14:24:18.165470+00:00] c0512_r01: still running (540s); see client.log
+[2026-09-05T14:24:48.175470+00:00] c0512_r01: still running (570s); see client.log
+[2026-09-05T14:25:18.185369+00:00] c0512_r01: still running (600s); see client.log
+[2026-09-05T14:25:48.195341+00:00] c0512_r01: still running (630s); see client.log
+[2026-09-05T14:26:18.205304+00:00] c0512_r01: still running (660s); see client.log
+[2026-09-05T14:26:48.215189+00:00] c0512_r01: still running (690s); see client.log
+[2026-09-05T14:27:18.226597+00:00] c0512_r01: still running (720s); see client.log
+[2026-09-05T14:27:48.237054+00:00] c0512_r01: still running (750s); see client.log
+[2026-09-05T14:28:18.248038+00:00] c0512_r01: still running (780s); see client.log
+[2026-09-05T14:28:48.258282+00:00] c0512_r01: still running (810s); see client.log
+[2026-09-05T14:29:18.270635+00:00] c0512_r01: still running (840s); see client.log
+[2026-09-05T14:29:21.196780+00:00] c0512_r01: output=1285.2916265680562 tok/s, p95 TTFT=55934.54469693825 ms, p95 TPOT=196.9400725491783 ms
+[2026-09-05T14:29:22.362115+00:00] Finished: completed. Packaging results.
+
+DOWNLOAD ZIP: /workspace/concurrency_sweep_run_20260905T134731Z.zip
+SUMMARY CSV: /workspace/concurrency_sweep_run_20260905T134731Z/summary.csv

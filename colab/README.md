@@ -5,3 +5,8 @@ Colab data and code
 
 3) next step change colab workbook into dataclass and design a test harness around vllm, the batch size parameters and save the runs so we dont have to rerun this configuration 
 4) create a react app which displays the a100 40GB colab batch size/throughput graphs. Place the react under llm_benchmark/simple_dashboard
+
+Redo to make clearer. 
+
+# this isnt accurate. Written by AI Contractor
+https://martinuke0.github.io/posts/2026-09-02-the-llm-inference-roadmap-i-wish-more-engineers-followed/
