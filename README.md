@@ -2,6 +2,8 @@ The goal of this repo is to show the process of using virtually free colab GPUs 
 
 The benchmarks are meant to demonstrate basic vllm concepts. Not useful to go start deploying on H100s until there are specific use cases. 
 
+apache echars, sse
+
 
 
 This plan was created by codex. Is it accurate? Up to a blunt point, no. A LLM isn't wise and never says no. You have to make a decision of what to believe. These aren't hallucinations. 
