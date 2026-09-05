@@ -1,0 +1,16 @@
+.chart-heading { min-height: 64px; }
+.chart-heading > div:first-child { display: flex; align-items: baseline; gap: 10px; }
+.chart-heading > div:first-child span { overflow: visible; }
+.metric-picker { display: flex; gap: 6px; }
+.metric-picker button { padding: 6px 9px; border-radius: 6px; color: #94a3b8; font-size: 11px; }
+.metric-picker .metric-picker__active { border-color: #0284c7; color: #e0f2fe; background: #075985; }
+.chart-body { position: relative; min-height: 460px; }
+.concurrency-chart { width: 100%; height: 460px; }
+.chart-empty { position: absolute; inset: 0; display: grid; place-items: center; padding: 28px; color: #7f8a9d; text-align: center; }
+@media (max-width: 720px) {
+  .chart-heading { align-items: flex-start; flex-direction: column; padding-block: 12px; }
+  .metric-picker { width: 100%; overflow-x: auto; }
+  .metric-picker button { white-space: nowrap; }
+  .chart-body { min-height: 380px; }
+  .concurrency-chart { height: 380px; }
+}

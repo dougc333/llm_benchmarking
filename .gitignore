@@ -19,6 +19,7 @@ build/
 # JavaScript
 node_modules/
 dashboard/dist/
+dashboard/.runtime/
 *.tsbuildinfo
 
 # Benchmark/runtime artifacts

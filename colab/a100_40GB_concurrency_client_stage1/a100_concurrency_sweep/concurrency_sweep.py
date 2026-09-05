@@ -148,6 +148,91 @@ def capture(cmd, env=None, timeout=30):
         return dict(command=cmd, error=str(e))
 
 
+def system_config(a, executable, server_cmd, points, root, env):
+    """Capture a concise, structured hardware/software record for this run."""
+    memory = {}
+    try:
+        page_size = os.sysconf('SC_PAGE_SIZE')
+        memory = {
+            'total_bytes': page_size * os.sysconf('SC_PHYS_PAGES'),
+            'available_bytes': page_size * os.sysconf('SC_AVPHYS_PAGES'),
+        }
+    except (AttributeError, OSError, ValueError):
+        pass
+
+    cpu_model = platform.processor() or None
+    try:
+        for line in Path('/proc/cpuinfo').read_text(errors='replace').splitlines():
+            if line.lower().startswith('model name'):
+                cpu_model = line.split(':', 1)[1].strip()
+                break
+    except OSError:
+        pass
+
+    gpu_query = capture([
+        'nvidia-smi',
+        '--query-gpu=index,name,uuid,driver_version,memory.total,memory.free,memory.used',
+        '--format=csv,noheader,nounits',
+    ], env)
+    gpus = []
+    if gpu_query.get('exit_code') == 0:
+        for line in gpu_query.get('output', '').splitlines():
+            fields = [field.strip() for field in line.split(',')]
+            if len(fields) == 7:
+                gpus.append({
+                    'index': int(fields[0]), 'name': fields[1], 'uuid': fields[2],
+                    'driver_version': fields[3], 'memory_total_mib': int(fields[4]),
+                    'memory_free_mib': int(fields[5]), 'memory_used_mib': int(fields[6]),
+                })
+
+    python = str(Path(executable).parent / 'python')
+    package_names = ['vllm', 'torch', 'transformers', 'flashinfer-python', 'flash-attn', 'ninja']
+    package_code = (
+        "import importlib.metadata as m,json; names=" + repr(package_names) + "; "
+        "print(json.dumps({n:(m.version(n) if n in {d.metadata['Name'] for d in m.distributions()} else None) for n in names}))"
+    )
+    package_capture = capture([python, '-c', package_code], env)
+    packages = {}
+    if package_capture.get('exit_code') == 0:
+        try:
+            packages = json.loads(package_capture.get('output', '{}'))
+        except json.JSONDecodeError:
+            pass
+
+    disk = shutil.disk_usage(root)
+    return {
+        'schema_version': 1,
+        'captured_utc': utc(),
+        'host': {
+            'hostname': platform.node(), 'os': platform.platform(),
+            'python': platform.python_version(),
+        },
+        'cpu': {
+            'model': cpu_model, 'architecture': platform.machine(),
+            'logical_cpu_count': os.cpu_count(),
+        },
+        'host_memory': memory,
+        'output_filesystem': {
+            'path': str(root), 'total_bytes': disk.total,
+            'free_bytes': disk.free, 'used_bytes': disk.used,
+        },
+        'gpus': gpus,
+        'gpu_query': gpu_query if not gpus else None,
+        'software': packages,
+        'settings': vars(a),
+        'launcher_command': sys.argv,
+        'vllm_server_command': server_cmd,
+        'benchmark_commands': [point['command'] for point in points],
+        'environment': {
+            key: env[key] for key in [
+                'CUDA_VISIBLE_DEVICES', 'HF_HOME', 'HF_HUB_DISABLE_XET',
+                'VLLM_LOGGING_LEVEL', 'VLLM_LOG_STATS_INTERVAL',
+                'VLLM_ATTENTION_BACKEND',
+            ] if key in env
+        },
+    }
+
+
 def http_text(url, timeout=3):
     # Ignore proxy variables for the loopback benchmark endpoint.
     with urllib.request.build_opener(urllib.request.ProxyHandler({})).open(url, timeout=timeout) as r:
@@ -278,6 +363,9 @@ def main():
     signal.signal(signal.SIGTERM, on_signal)
     try:
         write_json(root / 'manifest.json', manifest)
+        write_json(root / 'system_config.json', system_config(
+            a, executable, server_cmd, points, root, env,
+        ))
         log(f'Output: {root}')
         if a.dry_run:
             manifest['status'] = 'dry_run'
