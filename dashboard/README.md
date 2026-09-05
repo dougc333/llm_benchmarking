@@ -45,3 +45,7 @@ cd /Users/dc/llm_benchmarking/dashboard
 The Runpod API binds only to `127.0.0.1:8787`. Its stdout is stored in `/workspace/benchmark_server.log`; each sweep writes its combined live output to `/workspace/output.txt` and keeps all run directories and ZIP archives under `/workspace/past_runs`.
 
 Every run directory contains `system_config.json`, a structured record of the GPU and baseline GPU memory, CPU, host memory, disk space, Python and vLLM package versions, environment settings, and exact launcher, server, and benchmark commands. The larger `manifest.json` keeps the run lifecycle and detailed diagnostics.
+
+## Live concurrency graph
+
+![Live vLLM concurrency sweep dashboard](docs/concurrency-sweep-dashboard.png)
